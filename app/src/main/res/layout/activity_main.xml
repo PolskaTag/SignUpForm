@@ -10,7 +10,8 @@
         android:id="@+id/messageArea_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="User Info Goes Here"
+        android:text="Please enter information below."
+        android:textSize="24sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -70,43 +71,50 @@
         app:layout_constraintTop_toBottomOf="@+id/person_name_text" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/name_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Name"
+        android:textColor="#03A9F4"
         app:layout_constraintBaseline_toBaselineOf="@+id/person_name_text"
         app:layout_constraintEnd_toStartOf="@+id/person_name_text" />
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/email_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
         android:text="Email"
+        android:textColor="#03A9F4"
         app:layout_constraintBottom_toBottomOf="@+id/email_text"
         app:layout_constraintEnd_toStartOf="@+id/email_text" />
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/password_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
+        android:textColor="#03A9F4"
         app:layout_constraintBaseline_toBaselineOf="@+id/password_text"
         app:layout_constraintEnd_toStartOf="@+id/password_text" />
 
     <TextView
-        android:id="@+id/textView4"
-        android:layout_width="wrap_content"
+        android:id="@+id/password_conf_label"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:gravity="right"
+        android:scrollHorizontally="false"
         android:text="Confirm Password"
+        android:textColor="#03A9F4"
         app:layout_constraintBaseline_toBaselineOf="@+id/passwordconf_text"
-        app:layout_constraintEnd_toStartOf="@+id/passwordconf_text" />
+        app:layout_constraintEnd_toStartOf="@+id/passwordconf_text"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/name_err"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:textColor="#FF0000"
         app:layout_constraintBaseline_toBaselineOf="@+id/person_name_text"
         app:layout_constraintStart_toEndOf="@+id/person_name_text" />
 
@@ -115,15 +123,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="11dp"
-        android:text="TextView"
+        android:textColor="#FF0000"
         app:layout_constraintBottom_toBottomOf="@+id/email_text"
         app:layout_constraintStart_toEndOf="@+id/email_text" />
 
     <TextView
         android:id="@+id/password_err"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:scrollHorizontally="false"
+        android:textColor="#FF0000"
         app:layout_constraintBaseline_toBaselineOf="@+id/password_text"
         app:layout_constraintStart_toEndOf="@+id/password_text" />
 
@@ -132,7 +141,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:text="TextView"
+        android:textColor="#FF0000"
         app:layout_constraintStart_toEndOf="@+id/passwordconf_text"
         app:layout_constraintTop_toTopOf="@+id/passwordconf_text" />
 

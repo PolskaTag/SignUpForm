@@ -37,10 +37,45 @@ public class MainActivity extends AppCompatActivity {
         findViewById(R.id.button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                reset_errors();
+                boolean filled = true;
+
+                if("".equals(name.getText().toString())){
+                    name_err.setText("Enter name");
+                    filled = false;
+                }
+                if("".equals(email.getText().toString())){
+                    email_err.setText("Enter Email");
+                    filled = false;
+                }
+                if("".equals(password.getText().toString())){
+                    password_err.setText("Enter Password");
+                    filled = false;
+                }
+                if("".equals(password_conf.getText().toString())){
+                    password_conf_err.setText("Enter Password");
+                    filled = false;
+                }
+                // All info supplied, check password match
+                if(filled) {
+                    if(password.getText().toString().equals(password_conf.getText().toString())){
+                        message_area.setText("Welcome " + name.getText().toString() + " to SignUpForm!");
+                    }
+                    else {
+                        password_conf_err.setText("No match!");
+                    }
+
+                }
 
             }
         });
 
-
+    }
+    public void reset_errors(){
+        message_area.setText("Please enter information below.");
+        name_err.setText("");
+        email_err.setText("");
+        password_err.setText("");
+        password_conf_err.setText("");
     }
 }
